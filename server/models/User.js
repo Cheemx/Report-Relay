@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
 { timestamps : true }
 );
 
+// hash the password and push the hashed password in the document as we are saving it only when it is modified
 userSchema.pre("save", async function (next) {
     if(!this.isModified("password")) return next();
     this.password = await bcrypt.hash(this.password, 10)
