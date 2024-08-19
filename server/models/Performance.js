@@ -1,11 +1,36 @@
 import mongoose from "mongoose"
 
+const subPerformanceSchema = new mongoose.Schema({
+    name:{
+        type : String,
+        required : true
+    },
+    attendance:{
+        type : Number,
+        default : 0, 
+        required : true
+    },
+    inSem: {
+        type : Number, 
+        default : 0, 
+        required : true
+    },
+    prelim:{
+        type : Number, 
+        default : 0, 
+        required : true
+    },
+    remark: {
+        type : String,
+    }
+})
+
 const performanceSchema = new mongoose.Schema({
     studentName:{
         type : String, 
         required : true
     },
-    class:{
+    className:{
         type : String,
         required : true
     },
@@ -23,8 +48,7 @@ const performanceSchema = new mongoose.Schema({
     },
     subjectPerformance:[
         {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "SubPerformance"
+            type: subPerformanceSchema,
         }
     ], // Array of all Subject's performances
     createdBy: {
