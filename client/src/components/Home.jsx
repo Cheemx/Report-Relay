@@ -4,7 +4,7 @@ import Container from './Container'
 function Home (){
   return (
     <>
-    <div className='w-full py-8 mt-4 text-center'>
+    <div className='max-w-full py-8 mt-4 text-center'>
         <Container>
             <div className='flex flex-wrap p-2 w-full'>
                 <h1 className='text-2xl font-bold hover:text-[#D3D3D3]'>

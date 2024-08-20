@@ -1,9 +1,13 @@
 import React from "react";
 import Container from "./Container.jsx"
 import {Link, useNavigate} from "react-router-dom"
+import { useSelector } from "react-redux";
+import LogoutBtn from "./LogoutBtn.jsx";
+import Button from "./Button.jsx";
+import Logo from "./Logo.jsx"
 
 function Header() {
-    const authStatus = false// check authentication status of the user using useSelector
+    const authStatus = useSelector((state) => state.auth.status)
     const navigate = useNavigate()
     
     // add all the nav items in this list
@@ -12,27 +16,36 @@ function Header() {
             name: 'Home',
             slug: "/",
             active: true
+        },
+        {
+            name: 'Signup',
+            slug: '/register',
+            active: !authStatus
+        },
+        {
+            name: 'Login',
+            slug: '/login',
+            active: !authStatus
         }
     ]
 
     return (
-        <>
+        <Container>
             <header className="py-3 w-full shadow bg-[#2E2E2E]">
                 <div className="container mx-auto">
                     <nav className="flex items-center">
                         <div className="mr-4">
-                            <a href="/">
-                                <img src="path_to_logo.png" alt="Logo" className="w-[70px]" />
-                            </a>
+                            <Link to='/'>
+                                <Logo width="70px" />
+                            </Link>
                         </div>
                         <ul className="flex ml-auto">
                             {navItems.map((item) => 
                             item.active ? (
                                 <li key={item.name}>
-                                    <button
-                                    onClick={() => navigate(item.slug)}
-                                    className="inline-block px-6 py-2 duration-200 hover:bg-[#00FFFF] text-[#000000] rounded-full"
-                                    >{item.name}</button>
+                                    <Button onClick={() => navigate(item.slug)}>
+                                        {item.name}
+                                    </Button>
                                 </li>
                             ) : null
                             )}
@@ -45,8 +58,7 @@ function Header() {
                     </nav>
                 </div>
             </header>
-
-        </>
+            </Container>        
     )
 }
 
