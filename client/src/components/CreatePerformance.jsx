@@ -43,7 +43,8 @@ function CreatePerformance() {
                 {
                     headers: {
                         'Content-Type' : 'application/json'
-                    }
+                    },
+                    withCredentials: true
                 }
             )
     
@@ -51,7 +52,7 @@ function CreatePerformance() {
                 const userData = response.data
                 if (userData) {
                     dispatch(create(userData))
-                    navigate("https://report-relay.onrender.com/send-report")
+                    navigate("/send-report")
                 }
             } else {
                 console.error("Creation of the performance form failed")

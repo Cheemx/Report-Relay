@@ -26,7 +26,7 @@ function SendReport() {
           if(response.status === 201) {
               const userData = response.data
               if (userData) {
-                  navigate("https://report-relay.onrender.com/")
+                  navigate("/")
               }
           }
         } catch (error) {
@@ -44,7 +44,7 @@ function SendReport() {
                     <p>
                         Didn't create a Performance Form?&nbsp;
                         <Link
-                            to="https://report-relay.onrender.com/create-form"
+                            to="/create-form"
                             className='font-medium text-primary transition-all duration-200 hover:underline'
                         >
                             Performance

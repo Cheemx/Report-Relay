@@ -24,7 +24,7 @@ function LogoutBtn() {
     
             if(response.status === 200) {
                 dispatch(logout())
-                navigate("https://report-relay.onrender.com/")
+                navigate("/")
             } else {
                 console.error("Logout failed")
             }

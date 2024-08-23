@@ -30,7 +30,7 @@ const Login = () => {
                 const userData = response.data
                 if (userData) {
                     dispatch(authLogin(userData))
-                    navigate("https://report-relay.onrender.com/")
+                    navigate("/")
                 }
             }
         } catch (error) {
@@ -52,7 +52,7 @@ const Login = () => {
                 <p>
                     Don't have an Account?&nbsp;
                     <Link 
-                        to="https://report-relay.onrender.com/register"
+                        to="/register"
                         className='font-medium text-primary transition-all duration-200 hover:underline'
                     >
                         Sign Up
