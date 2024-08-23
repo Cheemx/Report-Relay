@@ -9,7 +9,7 @@ export default defineConfig({
         target : 'https://report-relay.onrender.com/', // add your render server link
         changeOrigin: true,
         secure: false,
-        rewrite: path => path.replace('/api', '')
+        rewrite: path => path.replace(/^\/api/, '')
       } 
     },
   },
