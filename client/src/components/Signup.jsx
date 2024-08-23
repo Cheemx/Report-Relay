@@ -17,7 +17,7 @@ function Signup() {
     const onSubmit = async (data) => {
         try {
             const response = await axios.post(
-                "/register",
+                "/api/register",
                 data,
                 { 
                     headers: {
@@ -55,7 +55,7 @@ function Signup() {
             <p>
                 Already have an Account?&nbsp;
                 <Link
-                    to="/login"
+                    to="/api/login"
                     className='font-medium text-primary transition-all duration-200 hover:underline'
                 >
                     Sign In
