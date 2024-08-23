@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('/api')
+    axios.get('/')
     .then((res) => {
       console.log("Client and Server connected!!!");
     })

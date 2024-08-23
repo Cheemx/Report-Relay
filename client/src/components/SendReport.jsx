@@ -13,7 +13,7 @@ function SendReport() {
     const sendReport = async (data) => {
         try {
           const response = await axios.post(
-              "/api/send-report",
+              "/send-report",
               data,
               {
                 headers:{

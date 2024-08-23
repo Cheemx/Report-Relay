@@ -17,7 +17,7 @@ const Login = () => {
     const login = async (data) => {
         try {
             const response = await axios.post(
-                "/api/login",
+                "/login",
                 data,
                 {
                     headers: {
@@ -52,7 +52,7 @@ const Login = () => {
                 <p>
                     Don't have an Account?&nbsp;
                     <Link 
-                        to="/api/register"
+                        to="/register"
                         className='font-medium text-primary transition-all duration-200 hover:underline'
                     >
                         Sign Up
