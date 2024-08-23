@@ -5,6 +5,8 @@ import App from './App.jsx'
 import Home from './components/Home.jsx'
 import Signup from './components/Signup.jsx'
 import Login from './components/Login.jsx'
+import CreatePerformance from './components/CreatePerformance.jsx'
+import Protected from "./components/Protected.jsx"
 import store from './store/store.js'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -20,11 +22,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/register",
-        element: <Signup />
+        element: (
+          <Protected authentication = {false}>
+            <Signup />
+          </Protected>
+        )
       },
       {
         path: "/login",
-        element: <Login />
+        element: (
+          <Protected authentication = {false}>
+            <Login />
+          </Protected>
+        )
+      },
+      {
+        path: "/create-form",
+        element: (
+          <Protected authentication = {true}>
+            <CreatePerformance />
+          </Protected>
+        )
       }
       // Add children here
     ]

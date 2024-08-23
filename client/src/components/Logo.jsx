@@ -1,9 +1,8 @@
 import React from "react";
 
-function Logo({width = '100px'}) {
+function Logo({width = '10px'}) {
     return (
-        // Add logo image here
-        <div>Logo</div>
+        <img className="h-10 w-auto items-center" src="../../logo.svg" alt="Report-Relay" height="auto"/>
     )
 }
 

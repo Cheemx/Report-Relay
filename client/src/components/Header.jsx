@@ -26,20 +26,25 @@ function Header() {
             name: 'Login',
             slug: '/login',
             active: !authStatus
+        },
+        {
+            name: 'Create Performance Form',
+            slug: '/create-form',
+            active: authStatus
         }
     ]
 
     return (
         <Container>
-            <header className="py-3 w-full shadow bg-[#2E2E2E]">
-                <div className="container mx-auto">
-                    <nav className="flex items-center">
-                        <div className="mr-4">
+            <header className="py-3 w-full shadow bg-neutral-900">
+                <div className="container mx-auto px-1">
+                    <nav className="flex flex-wrap items-center justify-between">
+                        <div className="flex-shrink-0">
                             <Link to='/'>
-                                <Logo width="70px" />
+                                <Logo width="100px" />
                             </Link>
                         </div>
-                        <ul className="flex ml-auto">
+                        <ul className="flex items-center ml-auto space-x-1">
                             {navItems.map((item) => 
                             item.active ? (
                                 <li key={item.name}>
@@ -58,7 +63,7 @@ function Header() {
                     </nav>
                 </div>
             </header>
-            </Container>        
+        </Container>        
     )
 }
 

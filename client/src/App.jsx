@@ -20,17 +20,20 @@ function App() {
   })
 
   return !loading ? (
-    <>
-    <div className='min-h-screen w-full flex flex-wrap content-between bg-[#2E2E2E]'>
-      <div className='w-full block'>
+    <div className='min-h-screen flex flex-col bg-neutral-800'>
+
+      <header className='w-full rounded-xl'>
         <Header />
-        <main className='h-lvh'>
-          TODO: <Outlet />
-        </main>
+      </header>
+
+      <main className='flex-grow p-8'>
+        <Outlet />
+      </main>
+
+      <footer className='w-full'>
         <Footer />
-      </div>
+      </footer>
     </div>
-    </>
   ) : null
 }
 
