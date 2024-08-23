@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     proxy:{
       '/api':{
-        target : 'http://localhost:8000/api/v1/users', // add your render server link
+        target : 'https://report-relay.onrender.com/', // add your render server link
         changeOrigin: true,
         secure: false,
         rewrite: path => path.replace('/api', '')
