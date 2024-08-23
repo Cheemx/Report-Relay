@@ -51,7 +51,7 @@ function CreatePerformance() {
                 const userData = response.data
                 if (userData) {
                     dispatch(create(userData))
-                    navigate("/")
+                    navigate("/send-report")
                 }
             } else {
                 console.error("Creation of the performance form failed")

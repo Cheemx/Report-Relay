@@ -139,20 +139,20 @@ const sendPerformanceEmail = asyncHandler(async (req, res) => {
         doc.moveDown()
     
         // Table Headers
-        doc.text('Subject', 50, 120)
-        doc.text('Attendance', 150, 120)
-        doc.text('InSem', 250, 120)
-        doc.text('Prelim', 350, 120)
-        doc.text('Remark', 450, 120)   
+        doc.text('Subject', 70, 150)
+        doc.text('Attendance', 170, 150)
+        doc.text('InSem', 270, 150)
+        doc.text('Prelim', 370, 150)
+        doc.text('Remark', 470, 150)   
 
-        let y = 150 // Initial position of y
+        let y = 170 // Initial position of y
         // adding performance data for each subject
         reportData.forEach(subject => {
-            doc.text(subject.name || '', 50, y)
-            doc.text(subject.attendance?.toString() || '', 150, y)
-            doc.text(subject.inSem?.toString() || '', 250, y)
-            doc.text(subject.prelim?.toString() || '', 350, y)
-            doc.text(subject.remark || '', 450, y)
+            doc.text(subject.name || '', 70, y)
+            doc.text(subject.attendance?.toString() || '', 170, y)
+            doc.text(subject.inSem?.toString() || '', 270, y)
+            doc.text(subject.prelim?.toString() || '', 370, y)
+            doc.text(subject.remark || '', 470, y)
 
             y += 20
         })

@@ -28,8 +28,13 @@ function Header() {
             active: !authStatus
         },
         {
-            name: 'Create Performance Form',
+            name: 'Performance',
             slug: '/create-form',
+            active: authStatus
+        },
+        {
+            name: 'Send Report',
+            slug: '/send-report',
             active: authStatus
         }
     ]

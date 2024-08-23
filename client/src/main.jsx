@@ -10,6 +10,7 @@ import Protected from "./components/Protected.jsx"
 import store from './store/store.js'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import SendReport from './components/SendReport.jsx'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,14 @@ const router = createBrowserRouter([
         element: (
           <Protected authentication = {true}>
             <CreatePerformance />
+          </Protected>
+        )
+      },
+      {
+        path: "/send-report",
+        element: (
+          <Protected authentication = {true}>
+            <SendReport />
           </Protected>
         )
       }
