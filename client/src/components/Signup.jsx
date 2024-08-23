@@ -17,7 +17,7 @@ function Signup() {
     const onSubmit = async (data) => {
         try {
             const response = await axios.post(
-                "/register",
+                "https://report-relay.onrender.com/register",
                 data,
                 { 
                     headers: {
@@ -30,7 +30,7 @@ function Signup() {
                 const userData = response.data
                 if (userData) {
                     dispatch(login(data))
-                    navigate("/login")
+                    navigate("https://report-relay.onrender.com/login")
                 }
             } else {
                 console.error("Signup Failed")
@@ -55,7 +55,7 @@ function Signup() {
             <p>
                 Already have an Account?&nbsp;
                 <Link
-                    to="/login"
+                    to="https://report-relay.onrender.com/login"
                     className='font-medium text-primary transition-all duration-200 hover:underline'
                 >
                     Sign In

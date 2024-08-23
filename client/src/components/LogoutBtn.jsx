@@ -12,7 +12,7 @@ function LogoutBtn() {
     const logoutHandler = async () => {
         try {
             const response = await axios.post(
-                "/logout",
+                "https://report-relay.onrender.com/logout",
                 {},
                 {
                     headers:{
@@ -24,7 +24,7 @@ function LogoutBtn() {
     
             if(response.status === 200) {
                 dispatch(logout())
-                navigate("/")
+                navigate("https://report-relay.onrender.com/")
             } else {
                 console.error("Logout failed")
             }

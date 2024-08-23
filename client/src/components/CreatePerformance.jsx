@@ -38,7 +38,7 @@ function CreatePerformance() {
     const createPerformance = async (data) => {
         try {
             const response = await axios.post(
-                "/create-form",
+                "https://report-relay.onrender.com/create-form",
                 data,
                 {
                     headers: {
@@ -51,7 +51,7 @@ function CreatePerformance() {
                 const userData = response.data
                 if (userData) {
                     dispatch(create(userData))
-                    navigate("/send-report")
+                    navigate("https://report-relay.onrender.com/send-report")
                 }
             } else {
                 console.error("Creation of the performance form failed")

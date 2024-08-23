@@ -17,7 +17,7 @@ const Login = () => {
     const login = async (data) => {
         try {
             const response = await axios.post(
-                "/login",
+                "https://report-relay.onrender.com/login",
                 data,
                 {
                     headers: {
@@ -30,7 +30,7 @@ const Login = () => {
                 const userData = response.data
                 if (userData) {
                     dispatch(authLogin(userData))
-                    navigate("/")
+                    navigate("https://report-relay.onrender.com/")
                 }
             }
         } catch (error) {
@@ -52,7 +52,7 @@ const Login = () => {
                 <p>
                     Don't have an Account?&nbsp;
                     <Link 
-                        to="/register"
+                        to="https://report-relay.onrender.com/register"
                         className='font-medium text-primary transition-all duration-200 hover:underline'
                     >
                         Sign Up

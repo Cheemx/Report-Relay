@@ -13,7 +13,7 @@ function SendReport() {
     const sendReport = async (data) => {
         try {
           const response = await axios.post(
-              "/send-report",
+              "https://report-relay.onrender.com/send-report",
               data,
               {
                 headers:{
@@ -26,7 +26,7 @@ function SendReport() {
           if(response.status === 201) {
               const userData = response.data
               if (userData) {
-                  navigate("/")
+                  navigate("https://report-relay.onrender.com/")
               }
           }
         } catch (error) {
@@ -44,7 +44,7 @@ function SendReport() {
                     <p>
                         Didn't create a Performance Form?&nbsp;
                         <Link
-                            to="/create-form"
+                            to="https://report-relay.onrender.com/create-form"
                             className='font-medium text-primary transition-all duration-200 hover:underline'
                         >
                             Performance
