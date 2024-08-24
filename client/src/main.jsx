@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import axios from 'axios'
 import { Provider } from 'react-redux'
 import App from './App.jsx'
 import Home from './components/Home.jsx'
@@ -11,6 +12,8 @@ import store from './store/store.js'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SendReport from './components/SendReport.jsx'
+
+axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
   {

@@ -68,6 +68,7 @@ function CreatePerformance() {
           <h2 className="text-3xl font-bold leading-tight text-white text-center mb-8">
             Fill Student Performance Details
           </h2>
+          {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
   
           <form onSubmit={handleSubmit(createPerformance)}>
             <div className="space-y-6">
