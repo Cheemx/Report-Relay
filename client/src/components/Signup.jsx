@@ -2,16 +2,13 @@ import React, { useState } from 'react'
 import { Link, useNavigate} from "react-router-dom"
 import { useForm } from "react-hook-form"
 import axios from "axios"
-import { useDispatch } from 'react-redux'
 import Button from "./Button.jsx"
 import Input from "./Input.jsx"
 import Logo from './Logo.jsx'
-import { login } from "../store/authSlice.js"
 
 function Signup() {
     const navigate = useNavigate()
     const [error, setError] = useState("")
-    const dispatch = useDispatch()
     const {register, handleSubmit} = useForm()
     
     const onSubmit = async (data) => {
@@ -29,8 +26,7 @@ function Signup() {
             if (response.status === 200) {
                 const userData = response.data
                 if (userData) {
-                    dispatch(login(data))
-                    navigate("https://report-relay.onrender.com/login")
+                    navigate("/login")
                 }
             } else {
                 console.error("Signup Failed")
