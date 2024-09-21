@@ -34,9 +34,9 @@ function App() {
         </footer>
     </div>
   ) : (
-    <div className='flex justify-center items-center min-h-screen bg-neutral-800'>
-        <div className='animate-spin w-16 h-16 border-t-4 rounded-full border-cyan-400 border-t-transparent'></div>
-        <p className='ml-4 text-cyan-300'>Loading...</p>
+    <div className='flex justify-center items-center min-h-screen bg-black'>
+        <div className='w-16 h-16 border-8 border-t-cyan-700 border-gray-300 rounded-full animate-spin'></div>
+        <p className='ml-4 text-cyan-500'>Loading...</p>
     </div>
   )
 }

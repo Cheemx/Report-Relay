@@ -19,4 +19,13 @@ body {
 body:hover {
     background: linear-gradient(145deg, #212121, #1b1b1b);
     box-shadow: inset 0 6px 15px rgba(255, 255, 255, 0.15);
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
