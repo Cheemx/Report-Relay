@@ -3,7 +3,7 @@ import Container from './Container'
 
 function Home (){
   return (
-    <div className='min-h-screen bg-gray-800 max-w-full py-8 mt-4 text-center flex flex-col items-center justify-center p-4'>
+    <div className='min-h-screen bg-neutral-800 max-w-full py-8 mt-4 text-center flex flex-col items-center justify-center p-4'>
             <h1 className='text-4xl font-bold text-white mb-6'>
                 Welcome to Report-Relay!
             </h1>
@@ -44,7 +44,7 @@ function Home (){
                     </li>
                 </ul>
 
-                <div className='bg-neutral-700 p-4 rounded-lg shadow-lg max-w-md'>
+                <div className='bg-neutral-600 p-4 rounded-lg shadow-lg max-w-md'>
                 <h2 className='text-xl font-bold text-white mb-2'>
                     Get in Touch:
                 </h2>
