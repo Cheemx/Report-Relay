@@ -20,5 +20,4 @@
 
 ## 📎 Links
 
-- **GitHub Repo**: [Report-Relay](your-github-repo-link)
-- **Feedback**: Send feedback to [your-email@example.com]
+- **Feedback**: Send feedback to [chinmaymahajan999@gmail.com]
