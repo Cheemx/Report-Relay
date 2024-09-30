@@ -66,10 +66,12 @@ function Home (){
 
                 <div className='bg-neutral-600 p-4 rounded-lg shadow-lg max-w-md'>
                 <h2 className='text-xl font-bold text-white mb-2'>
-                    <span className='font-semibold'>Test Account:</span> You can explore the project using the following test account:
+                    <span className='font-semibold'>Test Account:</span>
                 </h2>
                 <ul className='text-gray-300'>
                 <li>
+                        <span className='font-semibold'> You can explore the project using the following test account:</span>
+                        <br />
                         <span className='font-semibold'>Email:</span> one@gmail.com 
                         <br />
                         <span className='font-semibold'>Password:</span> one@123
