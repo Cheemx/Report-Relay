@@ -10,7 +10,6 @@ function Home (){
             <p className='text-gray-300 font-normal text-xl text-left justify-start'>
                 Report-Relay is a platform designed to streamline the generation and distribution of student performance reports. Below is a brief description of how the project was built and how it works.
             </p>
-            <br /> 
 
             <div className='text-left max-w-2xl mb-8'>
                 <h2 className='text-2xl font-bold text-cyan-300 mb-4'>Project Overview</h2>
@@ -25,7 +24,6 @@ function Home (){
                         <span className='font-semibold'>Database:</span> MongoDB is utilized to securely store user data and student performance records.
                     </li>
                 </ul>
-                <br />
 
                 <h2 className='text-2xl font-bold text-cyan-300 mb-4'>How it Works</h2>
                 <ul className='list-disc text-gray-300 pl-5'>
