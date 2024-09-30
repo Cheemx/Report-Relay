@@ -35,20 +35,9 @@ function Home (){
                     <li>
                         <span className='font-semibold'>Send Route:</span> Sends the created report to the student's parent via email. Ensure the email entered during performance creation matches the one used to send the report.
                     </li>
-                    <li>
-                        <span className='font-semibold'>Test Account:</span> You can explore the project using the following test account:
-                        <br />
-                        <span className='font-semibold'>Email:</span> one@gmail.com 
-                        <br />
-                        <span className='font-semibold'>Password:</span> one@123
-                    </li>
-                </ul>
-
-                <div className='bg-neutral-600 p-4 rounded-lg shadow-lg max-w-md'>
-                <h2 className='text-xl font-bold text-white mb-2'>
+                    <h2 className='text-xl font-bold text-white mb-2'>
                     Get in Touch:
-                </h2>
-                <ul className='text-gray-300'>
+                    </h2>
                     <li>
                         <span className='font-semibold'>GitHub Repository:</span>
                         <br />
@@ -72,6 +61,18 @@ function Home (){
                             className='text-cyan-400 hover:underline'>
                             chinmaymahajan999@gmail.com
                         </a>
+                    </li>
+                </ul>
+
+                <div className='bg-neutral-600 p-4 rounded-lg shadow-lg max-w-md'>
+                <h2 className='text-xl font-bold text-white mb-2'>
+                    <span className='font-semibold'>Test Account:</span> You can explore the project using the following test account:
+                </h2>
+                <ul className='text-gray-300'>
+                <li>
+                        <span className='font-semibold'>Email:</span> one@gmail.com 
+                        <br />
+                        <span className='font-semibold'>Password:</span> one@123
                     </li>
                 </ul>
             </div>
