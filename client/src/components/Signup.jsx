@@ -14,7 +14,7 @@ function Signup() {
     const onSubmit = async (data) => {
         try {
             const response = await axios.post(
-                "https://report-relay.onrender.com/register",
+                "/api/register",
                 data,
                 { 
                     headers: {

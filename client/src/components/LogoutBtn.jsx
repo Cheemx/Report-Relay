@@ -12,7 +12,7 @@ function LogoutBtn() {
     const logoutHandler = async () => {
         try {
             const response = await axios.post(
-                "https://report-relay.onrender.com/logout",
+                "/api/logout",
                 {},
                 {
                     headers:{

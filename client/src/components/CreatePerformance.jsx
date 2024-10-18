@@ -38,7 +38,7 @@ function CreatePerformance() {
     const createPerformance = async (data) => {
         try {
             const response = await axios.post(
-                "https://report-relay.onrender.com/create-form",
+                "/api/create-form",
                 data,
                 {
                     headers: {
@@ -161,17 +161,17 @@ function CreatePerformance() {
                       {...register(`subjectPerformance.${index}.remark`)}
                       className="w-full"
                     />
+                  </div>
                     <div className="grid grid-cols-1 text-center">
                       <Button
                         onClick={() =>
                           append({ name: "", attendance: "", inSem: "", prelim: "", remark: "" })
                         }
-                        className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-10"
+                        className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 w-fit rounded mt-10"
                       >
                         Add Subject
                       </Button>
                     </div>
-                  </div>
                 </div>
               ))}
   

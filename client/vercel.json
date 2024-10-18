@@ -1,8 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/(.*)",
-        "destination": "https://report-relay.onrender.com/"
+        "source": "/api/:path",
+        "destination": "https://report-relay.onrender.com/:path"
       }
     ]
   }

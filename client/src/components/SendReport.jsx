@@ -13,7 +13,7 @@ function SendReport() {
     const sendReport = async (data) => {
         try {
           const response = await axios.post(
-              "https://report-relay.onrender.com/send-report",
+              "/api/send-report",
               data,
               {
                 headers:{

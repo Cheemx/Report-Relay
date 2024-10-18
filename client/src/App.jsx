@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-        axios.get('https://report-relay.onrender.com/')
+        axios.get('/api')
         .then((res) => {
         console.log("Client and Server connected!!!");
         })
