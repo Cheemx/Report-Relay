@@ -38,7 +38,7 @@ function CreatePerformance() {
     const createPerformance = async (data) => {
         try {
             const response = await axios.post(
-                "/api/create-form",
+                "https://report-relay.onrender.com/create-form",
                 data,
                 {
                     headers: {

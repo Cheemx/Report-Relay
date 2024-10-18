@@ -17,7 +17,7 @@ const Login = () => {
     const login = async (data) => {
         try {
             const response = await axios.post(
-                "/api/login",
+                "https://report-relay.onrender.com/login",
                 data,
                 {
                     headers: {
